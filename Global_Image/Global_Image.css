@@ -1,0 +1,9 @@
+.image-button-display-type {
+    display: inline-block;
+    position: relative;
+    top: 33%;
+}
+
+.hiddenDiv{
+    display: none;
+}

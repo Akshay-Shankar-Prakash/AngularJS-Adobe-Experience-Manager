@@ -1,0 +1,165 @@
+.enroll-box {
+    width: 100%;
+    @media #{$bp-desktop-rule} {
+        width: 100%;
+    }
+    @media only screen and (min-width: "#{$bp-tab-portrait}") and (max-width: "#{$bp-tab-landscape}") {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 769px) {
+    width: 100%;
+    }
+
+    padding: 10px 10px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+
+    @media #{$bp-mobile-rule} {
+        padding: 15px;
+    }
+
+    &--content {
+        text-align: center;
+        padding: 0px 20px;
+        * {
+            text-align: center;
+        }
+        min-height: 300px;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.45);
+        margin: auto;
+
+        @media #{$bp-desktop-rule} {
+            max-width: 300px;
+        }
+
+        .enroll-marketing {
+            min-height: 230px;
+        }
+    }
+}
+
+.headingLevel1{   
+    margin-bottom: 0;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    color: dimgray;
+}
+
+.headingLevel2{   
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 200;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.glbImageButtonFocusIndicator:focus{ 
+  outline: 1px solid !important;
+  outline-color: black !important;
+  border-color: black !important;
+  outline-offset: -0.2em !important;
+  filter: brightness(90%);
+}
+
+.glbImageButtonFocusIndicator:hover{ 
+  filter: brightness(90%);
+}
+
+.image-button-display-type {
+  display: inline-block;
+  position: relative;
+  top: 33%;
+}
+
+.hiddenDiv{
+    display: none;
+}
+
+.enrol_now_button login-button dash-button dash-button--affirm {
+    text-align: center;
+    width: 26px;
+    height: 4px;
+    color: #fff;
+    background-color: #D52B1E;
+    padding-top: 2rem;
+    font-family: Lato, Helvetica;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#textBefore, #textAfter {
+    display: inline-block;
+}
+
+.cardTitle{
+    display: block;
+    font-family: Lato;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.cardImage{
+    padding-bottom: 2rem;
+}
+
+.enroll-products {
+    width: 100%;
+    @media #{$bp-desktop-rule} {
+        width: 100%;
+    }
+    @media only screen and (min-width: "#{$bp-tab-portrait}") and (max-width: "#{$bp-tab-landscape}") {
+        width: 100%;
+    }
+
+    padding: 10px 10px;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+
+    @media #{$bp-mobile-rule} {
+        padding: 15px;
+    }
+
+    &--content {
+        text-align: center;
+        padding: 0px 20px;
+        * {
+            text-align: center;
+        }
+        min-height: 70px;
+        box-shadow: 0 4px 7px rgba(0, 0, 0, 0.45);
+        margin: auto;
+
+        @media #{$bp-desktop-rule} {
+            max-width: 700px;
+        }
+
+        .enroll-marketing {
+            min-height: 30px;
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-flow: wrap
+        }
+        .bankingTitle{
+            display: block;
+            font-family: Lato;
+            font-size: 18px;
+            text-align: left;
+            vertical-align: middle;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+}

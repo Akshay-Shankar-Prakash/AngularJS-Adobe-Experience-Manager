@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="i18n Label"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    width="960">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Label"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <gl_label_idAttr
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Label ID"
+                                name="./gl_label_idAttr"
+                                required="{Boolean}true"/>
+                            <gl_label_cssClassOne
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="The style appended to this i18n tag. It can be overridden by filling in the other values."
+                                fieldLabel="CSS Style"
+                                name="./gl_label_cssClassOne">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <def
+                                        jcr:primaryType="nt:unstructured"
+                                        text="(default)"
+                                        value=""/>
+                                    <body-copy
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Body Copy Medium"
+                                        value="body-copy--medium"/>
+                                    <body-copy--medium-subtitle
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Body Copy Medium Subtitle"
+                                        value="body-copy--medium-subtitle"/>
+                                    <body-copy-large
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Body Copy Large"
+                                        value="body-copy--large"/>
+                                    <body-copy-large-subtitle
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Body Copy Large Subtitle"
+                                        value="body-copy--large-subtitle"/>
+                                    <mouse-type
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Mouse Type"
+                                        value="body-copy--mouse-type"/>
+                                    
+                                </items>
+                            </gl_label_cssClassOne>
+                            <gl_label_paragraphStyle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="The paragraph style. p, h1, h2, etc... Default is a div."
+                                fieldLabel="Paragraph Style"
+                                name="./gl_label_paragraphStyle">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <def
+                                        jcr:primaryType="nt:unstructured"
+                                        text="(default)"
+                                        value=""/>
+                                    <paragraph
+                                        jcr:primaryType="nt:unstructured"
+                                        text="p"
+                                        value="paragraph"/>
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h1"
+                                        value="header1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="h2"
+                                        value="header2"/>
+                                </items>
+                            </gl_label_paragraphStyle>
+                            <gl_label_i18nLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Label(i18n)"
+                                name="./gl_label_i18nLabel"
+                                required="{Boolean}true"/>
+                            <gl_label_aria_label
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Aria Label(i18n)"
+                                fieldDescription="When using Link To provide a description what the link will do, or where it will go. Screen readers will read this instead of the standard Label so make sure it contains the same information if necessary."
+                                name="./gl_label_aria_label"/>
+                            <gl_label_linkTo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Link To"
+                                fieldDescription="(i18n statement) If you define a link, this component will use the link and not the popup"
+                                name="./gl_label_linkTo"/>
+                            <gl_popup
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Popup to Open"
+                                fieldDescription="This will bind a popup to the anchor tag in the label. Just write a # in the Link To if there isn't one defined in the i18n statement. Popup to Open must exactly match the Popup Name in the popup properties."
+                                name="./gl_popup"/>
+                            <gl_qParamError_i18nLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="i18n Label (Query Parameter)"
+                                fieldDescription="Label to look for query parameter value."
+                                name="./gl_qParamError_i18nLabel"/>
+                            <gl_qParamError_checkbox
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                text="Display errors from query parameter"
+                                fieldDescription="Check whether to display errors from query parameters."
+                                name="./gl_qParamError_checkbox"/>
+                        </items>
+                    </column>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Style"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                        <gl_label_displayType
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldDescription="The display type. Default is block"
+                            fieldLabel="Display Type"
+                            name="./gl_label_displayType">
+                            <items jcr:primaryType="nt:unstructured">
+                                <def
+                                    jcr:primaryType="nt:unstructured"
+                                    text="block"
+                                    value="block"/>
+                                <block
+                                    jcr:primaryType="nt:unstructured"
+                                    text="inline-block"
+                                    value="inline-block"/>
+                                <inline_block
+                                    jcr:primaryType="nt:unstructured"
+                                    text="inline"
+                                    value="inline"/>
+                            </items>
+                            </gl_label_displayType>
+                            <gl_style_text_textAlign
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldDescription="Text alignment"
+                            fieldLabel="Text Align"
+                            name="./gl_style_text_textAlign">
+                            <items jcr:primaryType="nt:unstructured">
+                                <def
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Default"
+                                    value=""/>
+                                <text-align-left
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Left"
+                                    value="left"/>
+                                <text-align-center
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Center"
+                                    value="center"/>
+                                <text-align-right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Right"
+                                    value="right"/>
+                            </items>
+                            </gl_style_text_textAlign>
+                            <gl_style_font_fontFamily
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Family"
+                                name="./gl_style_font_fontFamily"
+                                required="{Boolean}false"/>
+                            <gl_style_font_fontSize
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Size"
+                                name="./gl_style_font_fontSize"
+                                required="{Boolean}false"/>
+                            <gl_style_font_fontStyle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Style"
+                                name="./gl_style_font_fontStyle"
+                                required="{Boolean}false"/>
+                            <gl_style_font_fontVariant
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Variant"
+                                name="./gl_style_font_fontVariant"
+                                required="{Boolean}false"/>
+                            <gl_style_font_fontWeight
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Weight"
+                                name="./gl_style_font_fontWeight"
+                                required="{Boolean}false"/>
+                            <gl_style_bg_color
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Background Colour"
+                                name="./gl_style_bg_color"
+                                required="{Boolean}false"/>
+                            <gl_style_text_color
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text Colour"
+                                name="./gl_style_text_color"
+                                required="{Boolean}false"/>
+                            <gl_style_text_textShadow
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text Shadow"
+                                name="./gl_style_text_textShadow"
+                                required="{Boolean}false"/>
+                            <gl_style_text_line_height
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Line Height"
+                                name="./gl_style_text_line_height"
+                                required="{Boolean}false"/>
+                            <gl_style_text_verticalAlign
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Vertical Align"
+                                name="./gl_style_text_verticalAlign"
+                                required="{Boolean}false"/>
+                            <gl_style_text_paddingTop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Top"
+                                name="./gl_style_text_paddingTop"/>
+                            <gl_style_text_paddingRight
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Right"
+                                name="./gl_style_text_paddingRight"/>
+                            <gl_style_text_paddingBottom
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Bottom"
+                                name="./gl_style_text_paddingBottom"/>
+                            <gl_style_text_paddingLeft
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Left"
+                                name="./gl_style_text_paddingLeft"/>
+                            <gl_style_text_marginTop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin Top"
+                                name="./gl_style_text_marginTop"/>
+                            <gl_style_text_marginRight
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin Right"
+                                name="./gl_style_text_marginRight"/>
+                            <gl_style_text_marginBottom
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin Bottom"
+                                name="./gl_style_text_marginBottom"/>
+                            <gl_style_text_marginLeft
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin Left"
+                                name="./gl_style_text_marginLeft"/>
+                            <gl_style_text_borderTop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Top"
+                                name="./gl_style_text_borderTop"/>
+                            <gl_style_text_borderRight
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Right"
+                                name="./gl_style_text_borderRight"/>
+                            <gl_style_text_borderBottom
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Bottom"
+                                name="./gl_style_text_borderBottom"/>
+                            <gl_style_text_borderLeft
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Left"
+                                name="./gl_style_text_borderLeft"/>
+                            <gl_label_verticalPosition
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldDescription="The vertical postion of the entire element. It defaults to top"
+                            fieldLabel="Vertical"
+                            name="./gl_label_verticalPosition">
+                            <items jcr:primaryType="nt:unstructured">
+                                <vertical-top
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Top"
+                                    value=""/>
+                                <vertical-middle
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Middle"
+                                    value="vertical-centered-row"/>
+                                <vertical-bottom
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Bottom"
+                                    value="vertical-bottom-row"/>
+                            </items>
+                            </gl_label_verticalPosition>
+                            <gl_label_horizontalPosition
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldDescription="The horizontal postion of the entire element. It defaults to left. Use text align if you want the text to be centered."
+                            fieldLabel="Horizontal"
+                            name="./gl_label_horizontalPosition">
+                            <items jcr:primaryType="nt:unstructured">
+                                <horizontal-left
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Left"
+                                    value=""/>
+                                <horizontal-middle
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Center"
+                                    value="horizontal-centered-row"/>
+                                <horizontal-right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Right"
+                                    value="horizontal-right-row"/>
+                            </items>
+                            </gl_label_horizontalPosition>
+                        </items>
+                    </column>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Mobile Style"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                        <gl_label_mobileCssClass
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile CSS Class *"
+                                fieldDescription="Required for applying Mobile Styles. This cannot start with a number or contain spaces. If you use the same CSS class on another label, that label will get the styles of the first one. If you delete the first label, then those other labels will stop using the styles of the first one."
+                                name="./gl_label_mobileCssClass"
+                                required="{Boolean}false"/>
+                        <gl_label_displayType_768px
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldDescription="The display type. Default is block"
+                            fieldLabel="Display Type"
+                            name="./gl_label_displayType_768px">
+                            <items jcr:primaryType="nt:unstructured">
+                                <def
+                                    jcr:primaryType="nt:unstructured"
+                                    text="block"
+                                    value="block"/>
+                                <block
+                                    jcr:primaryType="nt:unstructured"
+                                    text="inline-block"
+                                    value="inline-block"/>
+                                <inline_block
+                                    jcr:primaryType="nt:unstructured"
+                                    text="inline"
+                                    value="inline"/>
+                            </items>
+                            </gl_label_displayType_768px>
+                            <gl_style_text_textAlign_768px
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldDescription="Text alignment"
+                            fieldLabel="Text Align"
+                            name="./gl_style_text_textAlign_768px">
+                            <items jcr:primaryType="nt:unstructured">
+                                <def
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Default"
+                                    value=""/>
+                                <text-align-left
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Left"
+                                    value="left"/>
+                                <text-align-center
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Center"
+                                    value="center"/>
+                                <text-align-right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="Right"
+                                    value="right"/>
+                            </items>
+                            </gl_style_text_textAlign_768px>
+                            <gl_style_font_fontFamily_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Family"
+                                name="./gl_style_font_fontFamily_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_font_fontSize_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Size"
+                                name="./gl_style_font_fontSize_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_font_fontStyle_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Style"
+                                name="./gl_style_font_fontStyle_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_font_fontVariant_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Variant"
+                                name="./gl_style_font_fontVariant_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_font_fontWeight_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Font Weight"
+                                name="./gl_style_font_fontWeight_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_bg_color_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Background Colour"
+                                name="./gl_style_bg_color_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_text_color_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text Colour"
+                                name="./gl_style_text_color_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_text_textShadow_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text Shadow"
+                                name="./gl_style_text_textShadow_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_text_line_height_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Line Height"
+                                name="./gl_style_text_line_height_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_text_verticalAlign_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Vertical Align"
+                                name="./gl_style_text_verticalAlign_768px"
+                                required="{Boolean}false"/>
+                            <gl_style_text_paddingTop_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Top"
+                                name="./gl_style_text_paddingTop_768px"/>
+                            <gl_style_text_paddingRight_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Right"
+                                name="./gl_style_text_paddingRight_768px"/>
+                            <gl_style_text_paddingBottom_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Bottom"
+                                name="./gl_style_text_paddingBottom_768px"/>
+                            <gl_style_text_paddingLeft_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Left"
+                                name="./gl_style_text_paddingLeft_768px"/>
+                            <gl_style_text_marginTop_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin Top"
+                                name="./gl_style_text_marginTop_768px"/>
+                            <gl_style_text_marginRight_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin Right"
+                                name="./gl_style_text_marginRight_768px"/>
+                            <gl_style_text_marginBottom_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin Bottom"
+                                name="./gl_style_text_marginBottom_768px"/>
+                            <gl_style_text_marginLeft_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin Left"
+                                name="./gl_style_text_marginLeft_768px"/>
+                            <gl_style_text_borderTop_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Top"
+                                name="./gl_style_text_borderTop_768px"/>
+                            <gl_style_text_borderRight_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Right"
+                                name="./gl_style_text_borderRight_768px"/>
+                            <gl_style_text_borderBottom_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Bottom"
+                                name="./gl_style_text_borderBottom_768px"/>
+                            <gl_style_text_borderLeft_768px
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Left"
+                                name="./gl_style_text_borderLeft_768px"/>                            
+                        </items>
+                    </column>
+                </items>
+            </tab3>
+        </items>
+    </content>
+</jcr:root>
+

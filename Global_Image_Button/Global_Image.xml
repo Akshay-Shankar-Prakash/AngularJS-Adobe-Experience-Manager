@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Scene 7 Image"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    width="960">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Label"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                         <items jcr:primaryType="nt:unstructured">
+                            <image_elementID
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Element ID"
+                                name="./image_elementID"
+                                required="{Boolean}false"/>
+                            <image_independentID
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Independent ID"
+                                name="./image_independentID"
+                                required="{Boolean}true"/>
+                            <image_altTag
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Image Alt Tag"
+                                name="./image_altTag"/>
+                            <image_linkTo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Link to"
+                                name="./image_linkTo"
+                                rootPath="/content/dash"
+                                suffix=".html"/>
+                            <image_image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Normal Image"
+                                name="./image_content"
+                                required="{Boolean}false"/>
+                            <image_image_retina
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Retina Image"
+                                name="./image_retina"
+                                required="{Boolean}false"/>
+                        </items>
+                    </column>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Style"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                         <items jcr:primaryType="nt:unstructured">
+                            <image_horizontal_position
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldDescription="The x position of the image"
+                            fieldLabel="Horizontal pos"
+                            name="./image_horizontal_position">
+                            <items jcr:primaryType="nt:unstructured">
+                                <def
+                                    jcr:primaryType="nt:unstructured"
+                                    text="default (left)"
+                                    value="horizontal-left-row"/>
+                                <centered
+                                    jcr:primaryType="nt:unstructured"
+                                    text="center"
+                                    value="horizontal-centered-row"/>
+                                <right
+                                    jcr:primaryType="nt:unstructured"
+                                    text="right"
+                                    value="horizontal-right-row"/>
+                            </items>
+                            </image_horizontal_position>
+
+                            <image_style_backgroundColour
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Background Colour"
+                                name="./image_style_backgroundColour"/>
+                            <image_style_opacity
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Opacity"
+                                name="./image_style_opacity"/>
+                            <image_style_borderType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Type"
+                                name="./image_style_borderType"/>
+                            <image_style_borderColour
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Colour"
+                                name="./image_style_borderColour"/>
+                            <image_style_borderRadius
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Radius"
+                                name="./image_style_borderRadius"/>
+                             <image_style_borderTop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Border Top"
+                                name="./image_style_borderTop"
+                                value="none"/>
+                            <image_style_height
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Height"
+                                name="./image_style_height"/>
+                            <image_style_max_height
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Max height"
+                                name="./image_style_max_height"/>
+                            <image_style_min_height
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Min height"
+                                name="./image_style_min_height"/>
+                            <image_style_width
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Width"
+                                name="./image_style_width"/>
+                            <image_style_max_width
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Max Width"
+                                name="./image_style_max_width"/>
+                            <image_style_min_width
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Min Width"
+                                name="./image_style_min_width"/>
+                            <image_style_paddingLeft
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Left"
+                                name="./image_style_paddingLeft"/>
+                            <image_style_paddingRight
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Right"
+                                name="./image_style_paddingRight"/>
+                            <image_style_paddingTop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Top"
+                                name="./image_style_paddingTop"/>
+                            <image_style_paddingBottom
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Padding Bottom"
+                                name="./image_style_paddingBottom"/>
+                            <image_style_margin
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Margin"
+                                name="./image_style_margin"/>
+                            <image_style_float
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Float"
+                                name="./image_style_float"/>
+                             <image_style_vertical_align
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Vertical Alignment"
+                                name="./image_style_vertical_align"/>
+                            <image_style_boxShadow
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Box Shadow"
+                                name="./image_style_boxShadow"/>
+                            <image_style_displayType
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldDescription="The display type. Default is block"
+                            fieldLabel="Display Type"
+                            name="./image_style_displayType">
+                             <items jcr:primaryType="nt:unstructured">
+                                <def
+                                    jcr:primaryType="nt:unstructured"
+                                    text="block"
+                                    value="block"/>
+                                <inine_block
+                                    jcr:primaryType="nt:unstructured"
+                                    text="inline-block"
+                                    value="inline-block"/>
+                                <inline
+                                    jcr:primaryType="nt:unstructured"
+                                    text="inline"
+                                    value="inline"/>
+                            </items>
+                            </image_style_displayType> 
+                        </items>
+                    </column>
+                </items>
+            </tab2>
+        </items>
+    </content>
+</jcr:root>
